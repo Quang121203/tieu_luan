@@ -29,6 +29,7 @@ app.use(function (req, res, next) {
   next();
 });
 
+
 //config cooki ====================================================
 app.use(cookieParser())
 

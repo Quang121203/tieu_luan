@@ -50,7 +50,6 @@ const getAllPDF = async (req, res) => {
 const deletePDF = async (req, res) => {
     const fileName = req.params.fileName
     await PDFService.deletePDF(fileName);
-    await removeFile(fileName);
     return res.status(200).json({
         EC: 0,
         EM: "Delete successfully",
