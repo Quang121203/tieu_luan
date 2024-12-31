@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import axios from '../../config/axios';
 import { toast } from 'react-toastify';
 
-import {useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { login } from '../../redux/userSlice';
 
 const Login = () => {
@@ -24,7 +24,7 @@ const Login = () => {
                 if (+res.EC === 1) toast.error(res.EM);
                 else {
                     toast.success(res.EM);
-                    dispatch(login({username:res.DT.username,roles:res.DT.role}));
+                    dispatch(login({ username: res.DT.username, roles: res.DT.role }));
                 }
             }
         }
@@ -71,7 +71,7 @@ const Login = () => {
                 className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
                 {/* <!-- Copyright --> */}
                 <div className="text-white mb-3 mb-md-0">
-                    Copyright © 2020. All rights reserved.
+                    Le Minh Quang - 47.01.104.171
                 </div>
                 {/* <!-- Copyright --> */}
             </div>
